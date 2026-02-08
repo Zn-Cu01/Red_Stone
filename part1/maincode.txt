@@ -13,7 +13,10 @@
         
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-image: url('back.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -21,7 +24,7 @@
         }
         
         .game-container {
-            background-color: #fff;
+            background-color: transparent;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
@@ -42,19 +45,19 @@
         }
         
         .board {
-            display: grid;
-            grid-template-columns: repeat(5, 120px);
-            grid-template-rows: repeat(4, 120px);
-            gap: 0;
-            background-color: #f0f0f0;
-            margin: 0 auto 40px;
-            padding: 0;
-            border-radius: 10px;
-            position: relative;
-            width: 630px;
-            height: 510px;
-            border: 15px solid #8B4513;
-            box-sizing: content-box;
+            display: grid;                /* 将棋盘设置为grid布局，用于创建网格结构 */
+            grid-template-columns: repeat(5, 120px);  /* 定义5列，每列宽度为120px */
+            grid-template-rows: repeat(4, 120px);     /* 定义4行，每行高度为120px */
+            gap: 0;                       /* 设置网格之间的间隙为0 */
+            background-color: #f0f0f0;    /* 设置棋盘的背景颜色为浅灰色 */
+            margin: 0 auto 40px;          /* 设置棋盘的外边距，水平居中，底部外边距为40px */
+            padding: 0;                   /* 设置棋盘的内边距为0 */
+            border-radius: 0px;          /* 设置棋盘的圆角为0px */
+            position: relative;            /* 设置棋盘的定位方式为相对定位，用于子元素的绝对定位 */
+            width: 630px;                 /* 设置棋盘的宽度为630px（5列 × 120px/列 ） */
+            height: 510px;                /* 设置棋盘的高度为510px（4行 × 120px/行 ） */
+            border: 15px solid #8B4513;    /* 设置棋盘的边框为15px宽的棕色边框 */
+            box-sizing: content-box;       /* 设置盒模型为content-box，使边框和内边距不影响元素的宽度和高度计算 */
         }
         
         .board::after {
